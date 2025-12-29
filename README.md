@@ -1,116 +1,59 @@
-# L.-R-ANALYSIS
-Linear Regression Analysis
-ME
-# 🧠 Machine Learning Classification of White Wine Quality
+# 🍷 Wine Quality Prediction – Linear Regression, Random Forest & MLP
 
-This project implements and compares three machine learning models to classify white wine quality using the *Wine Quality (White)* dataset. The task is framed as a **binary classification problem**, where wines with a quality score ≥6 are labelled as **"good"**, and those <6 as **"bad"**.
-
-The project evaluates traditional machine learning models alongside a neural network, analysing their performance across multiple configurations.
-
----
-
-## 📄 Project Overview
-
-The dataset contains **4,898 observations** and **12 attributes**, including physicochemical properties such as acidity, pH, alcohol level, and residual sugar.
-
-Three models were implemented:
-
-- **Logistic Regression**
-- **Random Forest Classifier**
-- **MLPClassifier (Neural Network)**
-
-Each model was tested under **three different configurations**, producing a total of **nine sets of results**.
-
----
-
-## 🎯 Objective
-
-The goal of this project is to:
-
-- Build and compare multiple classification models  
-- Evaluate their performance using standard metrics  
-- Identify which model performs best  
-- Analyse which features contribute most to wine quality prediction  
+This project analyzes the **Wine Quality (White)** dataset to predict wine quality based on physicochemical properties.  
+It was developed as part of my Artificial Intelligence module and includes exploratory analysis, feature engineering, and supervised machine learning models.
 
 ---
 
 ## 📊 Dataset
+The dataset used is **winequality-white.csv**, which includes variables such as:
 
-- **Name:** Wine Quality – White  
-- **Source:** UCI Machine Learning Repository  
-- **Samples:** 4,898  
-- **Features:** 11 physicochemical variables + quality score  
-- **Task:** Binary classification (good vs bad wine)
+- Fixed acidity  
+- Volatile acidity  
+- Residual sugar  
+- pH  
+- Sulphates  
+- Alcohol  
+- Quality (target variable)
 
 ---
 
-## 🧪 Models Implemented
+## 🤖 Models Implemented
 
-### 1. Logistic Regression  
-A baseline linear model used to establish a reference performance.
+### **1. Linear Regression**
+- Baseline model  
+- Easy to interpret  
+- Serves as a reference for more complex models  
 
-### 2. Random Forest Classifier  
-An ensemble model based on decision trees, robust to non-linear relationships.
+### **2. Random Forest Regressor**
+- Tree-based ensemble model  
+- Captures non-linear relationships  
+- Improves performance over linear regression  
 
-### 3. MLPClassifier  
-A feed-forward neural network capable of modelling complex patterns.
+### **3. MLP Regressor (Neural Network)**
+- Multi-layer architecture  
+- Learns complex patterns  
+- Requires normalization and hyperparameter tuning  
 
 ---
 
 ## 📈 Evaluation Metrics
+The models were evaluated using:
 
-Each model was evaluated using:
+- **MAE** (Mean Absolute Error)  
+- **MSE** (Mean Squared Error)  
+- **RMSE** (Root Mean Squared Error)  
+- **R² Score**
 
-- **Accuracy**
-- **F1-score**
-- **Confusion Matrix**
+Detailed results can be found in the notebooks:
 
-(Your lecturer recommended including exact metric values rather than approximations.)
-
----
-
-## 🧠 Key Findings
-
-- All required sections were implemented and clearly presented.  
-- The project successfully compared nine model configurations.  
-- The analysis provided meaningful interpretation of results.  
-- The submission was evaluated positively by the lecturer.  
-- Future improvement: report **exact metric values** instead of approximate ones.
+- `L.Regr.R.For.MLP.ipynb`  
+- `Metrics.ipynb`
 
 ---
 
-## 🛠️ Technologies Used
+## 📁 Repository Structure
 
-- Python  
-- Pandas  
-- NumPy  
-- Scikit-learn  
-- Matplotlib / Seaborn  
-- Jupyter Notebook / VSCode  
 
----
 
-## 📂 Repository Structure
-
-```
-├── L.Regr.R.For.MLP.ipynb
-├── Metrics.ipynb
-├── winequality-white.csv
-├── README.md
-```
-
----
-
-## 🚀 How to Run
-
-1. Clone the repository  
-2. Install required Python libraries  
-3. Open the notebooks in VSCode or Jupyter  
-4. Run the cells in order to reproduce the results  
-
----
-
-## 📚 Academic Context
-
-This project was submitted as part of an academic assignment and received positive feedback, noting strong structure, clear interpretation, and correct implementation of the required models and evaluations.
 
